@@ -3,186 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARP Digital - Solusi Kreatif Masa Kini</title>
+    <title>ARP Digital - Creative & Digital Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
-            --bg-color: #0b1120;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-main: #f8fafc;
+            --bg-color: #050811;
+            --card-bg: #111827;
+            --accent-primary: #00f2fe; /* Cyan Segar */
+            --accent-secondary: #7000ff; /* Ungu Hidup */
+            --text-main: #ffffff;
             --text-dim: #94a3b8;
-            --gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+            --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
         }
 
         * { scroll-behavior: smooth; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* NAVIGATION */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            background: rgba(11, 17, 32, 0.95);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #1e293b;
-            backdrop-filter: blur(10px);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%;
+            background: rgba(5, 8, 17, 0.8);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .logo { font-size: 22px; font-weight: bold; color: var(--accent-color); letter-spacing: 1px; }
+        .logo { font-size: 24px; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
 
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--accent-color); }
+        .nav-links a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 14px; font-weight: 600; transition: 0.3s; opacity: 0.8; }
+        .nav-links a:hover { opacity: 1; color: var(--accent-primary); }
 
         .btn-konsultasi {
             background: var(--gradient);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
+            color: white; padding: 12px 28px; border-radius: 30px;
+            text-decoration: none; font-weight: 700; font-size: 14px;
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+            transition: 0.3s; border: none; cursor: pointer;
         }
+        .btn-konsultasi:hover { transform: scale(1.05); box-shadow: 0 15px 25px rgba(112, 0, 255, 0.3); }
 
         /* HERO SECTION */
         .hero {
-            text-align: center;
-            padding: 150px 10% 80px;
-            background: radial-gradient(circle at top, #1e293b 0%, #0b1120 70%);
+            text-align: center; padding: 180px 10% 100px;
+            background: radial-gradient(circle at top, #1e1b4b 0%, #050811 60%);
         }
-
-        .hero h1 { font-size: 42px; margin-bottom: 10px; }
-        .hero p { color: var(--text-dim); font-size: 18px; max-width: 700px; margin: 0 auto; }
+        .hero h1 { font-size: 50px; font-weight: 800; margin-bottom: 15px; letter-spacing: -2px; line-height: 1.1; }
+        .hero h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-dim); font-size: 18px; max-width: 600px; margin: 0 auto; }
 
         /* SECTION STYLING */
-        .section-padding { padding: 100px 10%; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2 { font-size: 32px; color: var(--accent-color); margin-bottom: 10px; }
+        .section-padding { padding: 100px 8%; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 36px; font-weight: 800; margin-bottom: 10px; }
         .section-header p { color: var(--text-dim); }
 
         /* BMC GRID */
-        .bmc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
+        .bmc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1300px; margin: 0 auto; }
         .card-bmc {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 4px solid var(--accent-color);
-            transition: 0.3s;
+            background: var(--card-bg); padding: 30px; border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s; position: relative; overflow: hidden;
         }
+        .card-bmc:hover { border-color: var(--accent-primary); transform: translateY(-10px); background: #1a2236; }
+        .card-bmc h3 { font-size: 18px; margin-top: 0; color: var(--accent-primary); margin-bottom: 15px; }
+        .card-bmc p { font-size: 14px; color: var(--text-dim); margin: 0; }
 
-        .card-bmc:hover { transform: translateY(-5px); background: #243147; }
-        .card-bmc h3 { font-size: 18px; margin-top: 0; color: var(--accent-color); }
-
-        /* LAYANAN (SERVICES) */
-        .layanan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
+        /* LAYANAN */
+        .layanan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
         .card-layanan {
-            background: var(--card-bg);
-            padding: 40px 20px;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid #334155;
-            transition: 0.3s;
+            background: var(--card-bg); padding: 50px 30px; border-radius: 30px;
+            text-align: center; border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
         }
+        .card-layanan:hover { background: #1a2236; border-color: var(--accent-secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card-layanan i { font-size: 45px; margin-bottom: 25px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-layanan h3 { font-size: 22px; margin-bottom: 15px; }
+        .price-tag { display: inline-block; padding: 10px 25px; border-radius: 30px; background: rgba(56, 189, 248, 0.1); color: var(--accent-primary); font-weight: 800; font-size: 14px; border: 1px solid rgba(56, 189, 248, 0.2); }
 
-        .card-layanan:hover { border-color: var(--accent-color); box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
-        .card-layanan i { font-size: 40px; color: var(--accent-color); margin-bottom: 20px; }
-        .card-layanan h3 { margin-bottom: 15px; }
-        .card-layanan p { font-size: 14px; color: var(--text-dim); margin-bottom: 25px; }
+        /* ABOUT SECTION */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-box { background: rgba(255, 255, 255, 0.03); padding: 30px; border-radius: 20px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .stat-box h4 { font-size: 32px; margin: 0; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-box p { font-size: 14px; color: var(--text-dim); margin-top: 5px; }
 
-        .price-tag {
-            background: #0f172a;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            color: var(--text-main);
-            border: 1px solid var(--accent-color);
-        }
-
-        /* TENTANG (ABOUT) */
-        .about-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text { flex: 1; min-width: 300px; }
-        .about-text h3 { color: var(--accent-color); display: flex; align-items: center; gap: 10px; }
-        .about-stats { flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-        .stat-box {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #334155;
-        }
-
-        .stat-box h4 { font-size: 30px; margin: 0; color: var(--accent-color); }
-        .stat-box p { margin: 5px 0 0; font-size: 14px; color: var(--text-dim); }
-
-        /* TIM KAMI */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .team-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .team-card img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; border: 2px solid var(--accent-color); }
-        .team-card h4 { margin: 10px 0 5px; }
-        .team-card p { font-size: 12px; color: var(--text-dim); }
+        /* TEAM */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px; }
+        .team-card { text-align: center; background: var(--card-bg); padding: 40px 20px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .team-card img { width: 90px; height: 90px; border-radius: 50%; margin-bottom: 20px; padding: 5px; background: var(--gradient); }
 
         /* FOOTER */
-        footer {
-            padding: 50px 10%;
-            background: #070b14;
-            text-align: center;
-            border-top: 1px solid #1e293b;
-        }
+        footer { padding: 60px 8%; background: #02040a; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .social-links i { font-size: 24px; margin: 0 15px; color: var(--text-dim); transition: 0.3s; cursor: pointer; }
+        .social-links i:hover { color: var(--accent-primary); transform: translateY(-3px); }
 
-        .footer-links { margin-bottom: 20px; }
-        .footer-links i { margin: 0 15px; font-size: 20px; color: var(--text-dim); cursor: pointer; }
-        .footer-links i:hover { color: var(--accent-color); }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 38px; }
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -193,113 +123,117 @@
             <a href="#beranda">Beranda</a>
             <a href="#layanan">Layanan</a>
             <a href="#tentang">Tentang</a>
-            <a href="#" class="btn-konsultasi">Konsultasi</a>
         </div>
+        <button class="btn-konsultasi" onclick="showPopup()">Konsultasi</button>
     </nav>
 
     <section id="beranda" class="hero">
-        <h1>Business Model Canvas</h1>
-        <p>Solusi aset digital kreatif, modern, dan terjangkau untuk mahasiswa & UMKM.</p>
+        <h1>Strategi Bisnis <span>ARP Digital</span></h1>
+        <p>Menghadirkan aset digital premium: Template, E-book, dan Jasa Desain Kreatif dengan sentuhan inovasi terbaru.</p>
     </section>
 
     <div class="section-padding">
         <div class="bmc-grid">
-            <div class="card-bmc"><h3>👥 Customer Segments</h3><p>Mahasiswa, Freelancer, dan UMKM Digital.</p></div>
-            <div class="card-bmc"><h3>⚡ Value Propositions</h3><p>Template Premium & E-book Edukasi desain.</p></div>
-            <div class="card-bmc"><h3>📢 Channels</h3><p>Instagram, TikTok, dan GitHub Portofolio.</p></div>
-            <div class="card-bmc"><h3>💙 Customer Relationship</h3><p>Fast Respon & Update Aset Berkala.</p></div>
-            <div class="card-bmc"><h3>💰 Revenue Streams</h3><p>Penjualan Template & Jasa Desain Kustom.</p></div>
-            <div class="card-bmc"><h3>⚙️ Key Activities</h3><p>Produksi aset digital & Riset tren visual.</p></div>
-            <div class="card-bmc"><h3>🛠️ Key Resources</h3><p>Skill Desain & Perangkat Hardware.</p></div>
-            <div class="card-bmc"><h3>🤝 Key Partnerships</h3><p>Affiliate & Komunitas Mahasiswa SI.</p></div>
-            <div class="card-bmc"><h3>💲 Cost Structure</h3><p>Tools Premium & Biaya Operasional.</p></div>
+            <div class="card-bmc"><h3>👥 Customer Segments</h3><p>Mahasiswa, Freelancer, UMKM Digital, & Creator.</p></div>
+            <div class="card-bmc"><h3>⚡ Value Propositions</h3><p>Template Premium & E-book edukasi desain eksklusif.</p></div>
+            <div class="card-bmc"><h3>📢 Channels</h3><p>Instagram Reels, TikTok, & GitHub Portofolio.</p></div>
+            <div class="card-bmc"><h3>💙 Customer Relationship</h3><p>Fast Respon, Konsultasi Gratis, & Update Berkala.</p></div>
+            <div class="card-bmc"><h3>💰 Revenue Streams</h3><p>Penjualan Aset Digital & Jasa Desain Kustom.</p></div>
+            <div class="card-bmc"><h3>⚙️ Key Activities</h3><p>Produksi aset kreatif & Riset tren visual harian.</p></div>
+            <div class="card-bmc"><h3>🛠️ Key Resources</h3><p>Keahlian Desain, Laptop High-end, & Aset Premium.</p></div>
+            <div class="card-bmc"><h3>🤝 Key Partnerships</h3><p>Affiliate Marketer & Komunitas Mahasiswa SI.</p></div>
+            <div class="card-bmc"><h3>💲 Cost Structure</h3><p>Lisensi Software & Biaya Operasional Digital.</p></div>
         </div>
     </div>
 
-    <section id="layanan" class="section-padding" style="background: #0f172a;">
+    <section id="layanan" class="section-padding" style="background: #080c16;">
         <div class="section-header">
-            <h2>Layanan Kami</h2>
-            <p>Solusi lengkap untuk kebutuhan branding dan teknologi Anda</p>
+            <h2>Layanan Unggulan</h2>
+            <p>Solusi aset digital terbaik untuk menunjang produktivitas Anda</p>
         </div>
         <div class="layanan-grid">
             <div class="card-layanan">
-                <i class="fas fa-file-powerpoint"></i>
-                <h3>Template Digital</h3>
-                <p>Template PPT Sidang, Canva, dan CV Profesional.</p>
-                <span class="price-tag">Mulai Rp25.000</span>
+                <i class="fas fa-layer-group"></i>
+                <h3>Template Canva</h3>
+                <p>Feed Instagram, Story, dan Branding Kit siap pakai.</p>
+                <div class="price-tag">Rp25.000</div>
             </div>
             <div class="card-layanan">
-                <i class="fas fa-book"></i>
-                <h3>E-Book Premium</h3>
-                <p>Panduan desain dan strategi konten digital.</p>
-                <span class="price-tag">Mulai Rp35.000</span>
+                <i class="fas fa-file-pdf"></i>
+                <h3>E-Book Edukasi</h3>
+                <p>Panduan teknis desain dan strategi konten viral.</p>
+                <div class="price-tag">Rp35.000</div>
             </div>
             <div class="card-layanan">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Desain Grafis</h3>
-                <p>Logo, Poster, Banner, dan Feed Instagram.</p>
-                <span class="price-tag">Mulai Rp50.000</span>
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <h3>Desain Kustom</h3>
+                <p>Logo profesional dan ilustrasi sesuai keinginan.</p>
+                <div class="price-tag">Mulai Rp50.000</div>
             </div>
             <div class="card-layanan">
-                <i class="fas fa-video"></i>
-                <h3>Editing Video</h3>
-                <p>Video pendek TikTok, Reels, dan YouTube.</p>
-                <span class="price-tag">Mulai Rp75.000</span>
+                <i class="fas fa-clapperboard"></i>
+                <h3>Video Editing</h3>
+                <p>Editing video pendek (Reels/TikTok) durasi 60 detik.</p>
+                <div class="price-tag">Mulai Rp75.000</div>
             </div>
         </div>
     </section>
 
     <section id="tentang" class="section-padding">
-        <div class="section-header">
-            <h2>Tentang ARP Digital</h2>
-            <p>Kenali lebih dekat siapa kami dan apa yang kami perjuangkan</p>
-        </div>
-        <div class="about-container">
+        <div class="about-grid">
             <div class="about-text">
-                <h3><i class="fas fa-rocket"></i> Siapa Kami?</h3>
-                <p>ARP Digital adalah layanan Digital Kreatif yang didirikan oleh mahasiswa Sistem Informasi. Kami hadir untuk memberikan solusi desain yang cepat, modern, dan terjangkau.</p>
-                <h3><i class="fas fa-bullseye"></i> Visi & Misi</h3>
-                <p>Menjadi mitra kreatif terpercaya bagi masyarakat Indonesia, khususnya generasi muda dalam menghadapi era transformasi digital dengan menyediakan aset berkualitas.</p>
+                <div class="section-header" style="text-align: left;">
+                    <h2>Tentang Kami</h2>
+                    <p>Membangun ekosistem kreatif untuk generasi digital.</p>
+                </div>
+                <p>ARP Digital adalah platform Digital Service yang dikelola oleh mahasiswa Sistem Informasi. Kami percaya bahwa setiap ide layak mendapatkan visual terbaik.</p>
+                <div style="margin-top: 30px;">
+                    <p><i class="fas fa-check-circle" style="color:var(--accent-primary); margin-right:10px;"></i> Pengerjaan Cepat & Profesional</p>
+                    <p><i class="fas fa-check-circle" style="color:var(--accent-primary); margin-right:10px;"></i> Harga Bersahabat (Pelajar/UMKM)</p>
+                    <p><i class="fas fa-check-circle" style="color:var(--accent-primary); margin-right:10px;"></i> Support Konsultasi 24/7</p>
+                </div>
             </div>
-            <div class="about-stats">
-                <div class="stat-box"><h4>100+</h4><p>Klien Puas</p></div>
-                <div class="stat-box"><h4>99%</h4><p>Tingkat Kepuasan</p></div>
+            <div class="stat-grid">
+                <div class="stat-box"><h4>250+</h4><p>Project Selesai</p></div>
+                <div class="stat-box"><h4>150+</h4><p>Klien Aktif</p></div>
+                <div class="stat-box"><h4>98%</h4><p>Puas</p></div>
                 <div class="stat-box"><h4>24/7</h4><p>Dukungan</p></div>
-                <div class="stat-box"><h4>2+</h4><p>Tahun Pengalaman</p></div>
             </div>
         </div>
 
-        <div class="section-header" style="margin-top: 80px;">
-            <h2>Tim Kami</h2>
-        </div>
         <div class="team-grid">
             <div class="team-card">
-                <img src="https://ui-avatars.com/api/?name=Iqbal&background=38bdf8&color=fff" alt="Iqbal">
+                <img src="https://ui-avatars.com/api/?name=Iqbal&background=00f2fe&color=000" alt="Iqbal">
                 <h4>Iqbal</h4>
-                <p>Founder & Lead Designer</p>
+                <p>Founder & Lead Creative</p>
             </div>
             <div class="team-card">
-                <img src="https://ui-avatars.com/api/?name=Team+1&background=818cf8&color=fff" alt="Team">
-                <h4>Partner A</h4>
+                <img src="https://ui-avatars.com/api/?name=Team+1&background=7000ff&color=fff" alt="Team">
+                <h4>Riyan</h4>
+                <p>Web Developer</p>
+            </div>
+            <div class="team-card">
+                <img src="https://ui-avatars.com/api/?name=Team+2&background=38bdf8&color=000" alt="Team">
+                <h4>Aris</h4>
                 <p>Content Specialist</p>
-            </div>
-            <div class="team-card">
-                <img src="https://ui-avatars.com/api/?name=Team+2&background=a855f7&color=fff" alt="Team">
-                <h4>Partner B</h4>
-                <p>Tech Support</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-links">
+        <div class="social-links">
             <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
             <i class="fab fa-whatsapp"></i>
-            <i class="fas fa-envelope"></i>
         </div>
-        <div class="footer-info">© 2026 ARP Digital Store — Solusi Teknologi & Kreatif</div>
-        <div class="footer-info">Dibuat dengan ❤️ oleh Mahasiswa Sistem Informasi</div>
+        <p style="margin-top: 20px; font-size: 13px; color: var(--text-dim);">© 2026 ARP Digital Store — Sistem Informasi Kelas 6 SI</p>
     </footer>
+
+    <script>
+        function showPopup() {
+            alert("📞 Hubungi kami via WhatsApp: 0895 3305 52363\nAtau DM Instagram @arp_digital.official");
+        }
+    </script>
 
 </body>
 </html>
