@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMC - ViralVibe Creative</title>
+    <title>BMC - Z-Digital Store</title>
     <style>
         :root {
             --bg-color: #0b1120;
@@ -13,108 +13,172 @@
             --text-dim: #94a3b8;
         }
 
+        * { scroll-behavior: smooth; box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
-        header {
+        /* NAVIGATION */
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto 40px;
+            padding: 20px 10%;
+            background: rgba(11, 17, 32, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1e293b;
         }
 
-        .logo { font-size: 24px; font-weight: bold; color: var(--accent-color); }
+        .logo { font-size: 22px; font-weight: bold; color: var(--accent-color); letter-spacing: 1px; }
 
-        .hero { text-align: center; margin-bottom: 50px; }
-        .hero h1 { font-size: 28px; margin-bottom: 10px; }
-        .hero p { color: var(--text-dim); }
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
+        .nav-links a:hover { color: var(--accent-color); }
+
+        .btn-konsultasi {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 120px 10% 60px;
+        }
+
+        .hero h1 { font-size: 36px; margin-bottom: 10px; }
+        .hero p { color: var(--text-dim); font-size: 18px; }
+
+        /* BMC GRID */
+        .section-title { text-align: center; margin: 40px 0; color: var(--accent-color); }
+        
         .bmc-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            max-width: 1200px;
+            padding: 0 10%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid var(--accent-color);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-top: 0; color: var(--accent-color); font-size: 18px; display: flex; align-items: center; gap: 10px; }
-        .card p { font-size: 14px; line-height: 1.6; color: var(--text-dim); }
-
-        .btn-konsultasi {
-            background: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
+            padding: 30px;
             border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
+            border-top: 4px solid var(--accent-color);
+            transition: 0.3s;
         }
+
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1); }
+        .card h3 { margin-top: 0; color: var(--accent-color); font-size: 18px; margin-bottom: 15px; }
+        .card p { font-size: 14px; line-height: 1.7; color: var(--text-dim); }
+
+        /* LAYANAN & TENTANG */
+        .content-section { padding: 80px 10%; text-align: center; max-width: 1000px; margin: 0 auto; }
+        .content-section h2 { color: var(--accent-color); font-size: 28px; }
+        .content-section p { line-height: 1.8; color: var(--text-dim); }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 10%;
+            background: #070b14;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 60px;
+        }
+
+        .footer-info { color: var(--text-dim); font-size: 13px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">VIRALVIBE</div>
-        <a href="#" class="btn-konsultasi">Konsultasi</a>
-    </header>
+    <nav>
+        <div class="logo">Z-DIGITAL</div>
+        <div class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#" class="btn-konsultasi">Konsultasi</a>
+        </div>
+    </nav>
 
-    <div class="hero">
+    <div id="beranda" class="hero">
         <h1>Business Model Canvas</h1>
-        <p>Solusi kreatif & inovatif untuk generasi digital masa kini</p>
+        <p>Strategi Bisnis Digital: Template, E-book & Jasa Desain</p>
     </div>
 
     <div class="bmc-grid">
         <div class="card">
             <h3>👥 Customer Segments</h3>
-            <p>Mahasiswa, UMKM Lokal, Personal Brand, dan Kreator konten pemula.</p>
+            <p>Mahasiswa, Freelancer pemula, Pemilik UMKM digital, dan Content Creator yang butuh aset desain cepat.</p>
         </div>
         <div class="card">
-            <h3>⚡ Value Proposition</h3>
-            <p>Konten viral-ready, editing estetik, dan optimasi algoritma video pendek.</p>
+            <h3>⚡ Value Propositions</h3>
+            <p>Template desain premium siap pakai (Canva/PPT), E-book panduan praktis, dan jasa kustom desain dengan revisi cepat.</p>
         </div>
         <div class="card">
             <h3>📢 Channels</h3>
-            <p>TikTok, Instagram Reels, WhatsApp, dan Blog Portofolio.</p>
+            <p>Instagram (Katalog), TikTok (Tutorial), GitHub Pages (Portofolio), dan Lynk.id (Checkout Produk).</p>
         </div>
         <div class="card">
             <h3>💙 Customer Relationship</h3>
-            <p>Fast respon, konsultasi konten gratis, dan laporan mingguan.</p>
+            <p>Grup support WhatsApp/Telegram, Update template gratis berkala, dan diskon untuk pembeli setia.</p>
         </div>
         <div class="card">
             <h3>💰 Revenue Streams</h3>
-            <p>Jasa editing video, pengelolaan akun, dan penjualan template digital.</p>
+            <p>Penjualan paket template digital, penjualan E-book edukasi, dan biaya jasa desain kustom.</p>
         </div>
         <div class="card">
             <h3>⚙️ Key Activities</h3>
-            <p>Riset tren viral, produksi konten, dan manajemen media sosial.</p>
+            <p>Riset tren desain terkini, pembuatan aset digital berkualitas, dan promosi konten edukasi di media sosial.</p>
         </div>
         <div class="card">
             <h3>🛠️ Key Resources</h3>
-            <p>Skill editing, gadget tinggi, database musik tren, dan internet stabil.</p>
+            <p>Laptop spesifikasi desain, skill desain grafis, database elemen premium, dan akses internet stabil.</p>
         </div>
         <div class="card">
             <h3>🤝 Key Partnerships</h3>
-            <p>Suppier aset digital, komunitas kreatif, dan micro-influencer.</p>
+            <p>Platform microstock, Affiliate marketer (sistem bagi hasil), dan komunitas kreatif mahasiswa SI.</p>
         </div>
         <div class="card">
             <h3>💲 Cost Structure</h3>
-            <p>Langganan tools premium, kuota internet, dan biaya riset iklan.</p>
+            <p>Biaya langganan Canva Pro/Adobe, biaya listrik & internet, serta biaya riset/iklan konten media sosial.</p>
         </div>
     </div>
+
+    <section id="layanan" class="content-section">
+        <h2>Layanan Kami</h2>
+        <p>Kami menyediakan berbagai aset digital untuk mendukung produktivitas kamu, mulai dari Template PPT Sidang, E-book strategi marketing, hingga jasa desain Feed Instagram yang estetik dan profesional.</p>
+    </section>
+
+    <section id="tentang" class="content-section">
+        <h2>Tentang Z-Digital</h2>
+        <p>Z-Digital didirikan oleh mahasiswa Sistem Informasi untuk membantu generasi kreatif menghemat waktu dalam membuat konten berkualitas tinggi dengan harga yang sangat terjangkau bagi pelajar.</p>
+    </section>
+
+    <footer>
+        <div class="footer-info">© 2026 Z-Digital Store — Tugas Pengembangan Bisnis SI</div>
+        <div class="footer-info">IG: @zdigital.official | WA: 0812-3456-7890</div>
+    </footer>
 
 </body>
 </html>
