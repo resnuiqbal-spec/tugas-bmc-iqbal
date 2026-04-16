@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMC - ViralVibe Creative</title>
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: var(--accent-color); }
+
+        .hero { text-align: center; margin-bottom: 50px; }
+        .hero h1 { font-size: 28px; margin-bottom: 10px; }
+        .hero p { color: var(--text-dim); }
+
+        .bmc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-top: 0; color: var(--accent-color); font-size: 18px; display: flex; align-items: center; gap: 10px; }
+        .card p { font-size: 14px; line-height: 1.6; color: var(--text-dim); }
+
+        .btn-konsultasi {
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VIRALVIBE</div>
+        <a href="#" class="btn-konsultasi">Konsultasi</a>
+    </header>
+
+    <div class="hero">
+        <h1>Business Model Canvas</h1>
+        <p>Solusi kreatif & inovatif untuk generasi digital masa kini</p>
+    </div>
+
+    <div class="bmc-grid">
+        <div class="card">
+            <h3>👥 Customer Segments</h3>
+            <p>Mahasiswa, UMKM Lokal, Personal Brand, dan Kreator konten pemula.</p>
+        </div>
+        <div class="card">
+            <h3>⚡ Value Proposition</h3>
+            <p>Konten viral-ready, editing estetik, dan optimasi algoritma video pendek.</p>
+        </div>
+        <div class="card">
+            <h3>📢 Channels</h3>
+            <p>TikTok, Instagram Reels, WhatsApp, dan Blog Portofolio.</p>
+        </div>
+        <div class="card">
+            <h3>💙 Customer Relationship</h3>
+            <p>Fast respon, konsultasi konten gratis, dan laporan mingguan.</p>
+        </div>
+        <div class="card">
+            <h3>💰 Revenue Streams</h3>
+            <p>Jasa editing video, pengelolaan akun, dan penjualan template digital.</p>
+        </div>
+        <div class="card">
+            <h3>⚙️ Key Activities</h3>
+            <p>Riset tren viral, produksi konten, dan manajemen media sosial.</p>
+        </div>
+        <div class="card">
+            <h3>🛠️ Key Resources</h3>
+            <p>Skill editing, gadget tinggi, database musik tren, dan internet stabil.</p>
+        </div>
+        <div class="card">
+            <h3>🤝 Key Partnerships</h3>
+            <p>Suppier aset digital, komunitas kreatif, dan micro-influencer.</p>
+        </div>
+        <div class="card">
+            <h3>💲 Cost Structure</h3>
+            <p>Langganan tools premium, kuota internet, dan biaya riset iklan.</p>
+        </div>
+    </div>
+
+</body>
+</html>
