@@ -79,7 +79,7 @@
         }
         .card-bmc:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: var(--primary-tosca); }
         .card-bmc h3 { font-size: 14px; margin-bottom: 12px; font-weight: 800; text-transform: uppercase; }
-        .card-bmc p { font-size: 14px; color: var(--text-dim); text-align: left; }
+        .card-bmc p { font-size: 14px; color: var(--text-dim); text-align: justify; line-height: 1.6; } /* Dibuat justify agar rapi */
 
         .cs h3 { color: var(--color-cs); }
         .vp h3 { color: var(--color-vp); }
@@ -170,20 +170,47 @@
 
     <div class="section-padding">
         <div class="bmc-grid">
-            <div class="card-bmc cs"><h3>👥 Customer Segments</h3><p>Mahasiswa, UMKM Digital, & Content Creator.</p></div>
-            <div class="card-bmc vp"><h3>⚡ Value Propositions</h3><p>Template Premium & E-book desain eksklusif.</p></div>
-            <div class="card-bmc ch"><h3>📢 Channels</h3><p>Instagram Reels & Portofolio GitHub.</p></div>
-            <div class="card-bmc cr"><h3>💙 Customer Relationship</h3><p>Dukungan Cepat & Update Aset Berkala.</p></div>
-            <div class="card-bmc generic"><h3>💰 Revenue Streams</h3><p>Penjualan Aset & Jasa Desain Kustom.</p></div>
-            <div class="card-bmc generic"><h3>⚙️ Key Activities</h3><p>Produksi aset kreatif & Riset tren visual.</p></div>
-            <div class="card-bmc generic"><h3>🛠️ Key Resources</h3><p>Keahlian Desain & Library Aset.</p></div>
-            <div class="card-bmc generic"><h3>🤝 Key Partnerships</h3><p>Jaringan Komunitas Mahasiswa SI.</p></div>
-            <div class="card-bmc generic"><h3>💲 Cost Structure</h3><p>Software Kreatif & Biaya Operasional.</p></div>
+            <div class="card-bmc cs">
+                <h3>👥 Customer Segments</h3>
+                <p>Target pasar utama kami adalah sesama mahasiswa, *freelancer* pemula, pelaku UMKM yang baru melakukan digitalisasi, serta *content creator* yang membutuhkan identitas visual profesional namun memiliki keterbatasan anggaran dan waktu.</p>
+            </div>
+            <div class="card-bmc vp">
+                <h3>⚡ Value Propositions</h3>
+                <p>Menawarkan aset digital premium seperti *template* desain siap pakai dan e-book edukasi. Kami memberikan solusi visual yang mudah diedit (*customizable*), estetik, dan dirancang khusus untuk meningkatkan nilai jual serta *brand awareness* klien secara instan.</p>
+            </div>
+            <div class="card-bmc ch">
+                <h3>📢 Channels</h3>
+                <p>Pemasaran dan distribusi dilakukan secara digital melalui optimalisasi media sosial (Instagram Reels & TikTok) untuk edukasi *market*, pemanfaatan Portofolio GitHub untuk *showcase* proyek, serta promosi *word-of-mouth* di komunitas kampus.</p>
+            </div>
+            <div class="card-bmc cr">
+                <h3>💙 Customer Relationship</h3>
+                <p>Membangun loyalitas melalui layanan *fast response* 24/7, menyediakan sesi konsultasi gratis sebelum pemesanan, serta memberikan garansi perbaikan. Kami juga aktif memperbarui katalog aset agar relevan dengan tren visual terkini.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>💰 Revenue Streams</h3>
+                <p>Pendapatan utama bersumber dari transaksi penjualan langsung (*direct sales*) aset digital seperti *template* dan e-book. Pendapatan tambahan didapatkan melalui *upselling* layanan jasa desain kustom dan penyuntingan video profesional.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>⚙️ Key Activities</h3>
+                <p>Kegiatan operasional harian meliputi proses produksi desain kreatif, riset algoritma dan tren visual media sosial, pembuatan konten edukasi untuk pemasaran, serta pemeliharaan (*maintenance*) platform transaksi dan interaksi pelanggan.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>🛠️ Key Resources</h3>
+                <p>Aset terpenting mencakup Sumber Daya Manusia (tim desainer & *developer* dari mahasiswa SI), perangkat keras (laptop berspesifikasi desain), koneksi internet stabil, serta perpustakaan digital (*library aset*) yang komprehensif.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>🤝 Key Partnerships</h3>
+                <p>Menjalin kerja sama strategis dengan program *affiliate marketing*, berkolaborasi dengan komunitas dan himpunan mahasiswa Sistem Informasi, serta kemitraan dengan *micro-influencer* lokal untuk memperluas jangkauan promosi.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>💲 Cost Structure</h3>
+                <p>Struktur pembiayaan difokuskan pada biaya operasional bulanan seperti langganan lisensi *software* kreatif premium (Canva Pro, Adobe Cloud), biaya kuota internet, pemeliharaan domain/hosting, serta anggaran iklan digital skala kecil.</p>
+            </div>
         </div>
     </div>
 
     <section id="layanan" class="layanan-section">
-        <h2 style="text-align:center; margin-bottom: 50px;">Layanan Kami</h2>
+        <h2 style="text-align:center; margin-bottom: 50px; color: var(--dark-navy);">Layanan Kami</h2>
         <div class="layanan-grid">
             <div class="card-layanan">
                 <div class="img-container"><img src="OIP.webp" alt="Canva"></div>
@@ -213,11 +240,17 @@
     </section>
 
     <section id="tentang" class="section-padding">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: flex-start;">
             <div>
-                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 20px; color: var(--dark-navy);">Tentang Kami</h2>
-                <p style="margin-bottom: 15px; color: var(--text-dim);"><strong>ARP Digital</strong> adalah platform penyedia layanan dan aset kreatif digital yang dikelola oleh Mahasiswa Sistem Informasi. Kami hadir dengan misi utama membantu UMKM, freelancer, dan kreator konten dalam membangun identitas visual yang kuat dan profesional di era modern.</p>
-                <p style="margin-bottom: 30px; color: var(--text-dim);">Berbekal kreativitas dan pemahaman teknologi digital, kami menawarkan berbagai solusi praktis—mulai dari template Canva siap pakai, e-book panduan media sosial, hingga jasa desain kustom dan video editing. Kami menjamin kualitas premium dengan harga yang sangat bersahabat bagi semua kalangan.</p>
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 25px; color: var(--dark-navy);">Tentang Kami</h2>
+                
+                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;"><strong>ARP Digital</strong> berawal dari sebuah visi sederhana: menjadikan desain berkualitas tinggi dan profesional dapat diakses oleh siapa saja. Kami menyadari bahwa di era digital saat ini, kesan pertama sangat ditentukan oleh seberapa menarik tampilan visual sebuah brand di internet maupun media sosial.</p>
+                
+                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;">Sebagai agensi kreatif yang dikelola penuh oleh mahasiswa Sistem Informasi, kami memadukan kemampuan analitis teknologi dengan sentuhan seni estetika. Kombinasi ini memungkinkan kami merancang strategi visual yang tidak hanya indah dipandang, tetapi juga efektif secara fungsional untuk menarik target audiens yang tepat.</p>
+                
+                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;">Kami hadir menawarkan solusi yang efisien untuk mengatasi mahalnya biaya agensi konvensional. Mulai dari penyediaan template Canva premium yang mudah diedit, e-book panduan praktis, hingga layanan desain kustom dan video editing. Semua produk kami dirancang khusus untuk mempermudah alur kerja Anda tanpa perlu mengorbankan kualitas.</p>
+                
+                <p style="margin-bottom: 35px; color: var(--text-dim); text-align: justify;">Lebih dari sekadar penyedia jasa, ARP Digital berkomitmen untuk menjadi partner kolaborasi Anda. Dengan inovasi tiada henti dan layanan pelanggan yang responsif, kami siap membantu rekan mahasiswa, UMKM, freelancer, dan kreator pemula untuk naik level dan memenangkan persaingan di industri kreatif modern.</p>
                 
                 <div class="stat-grid">
                     <div class="stat-box"><h4>171</h4><p>Projects</p></div>
@@ -226,8 +259,9 @@
                     <div class="stat-box"><h4>1+</h4><p>Experience</p></div>
                 </div>
             </div>
-            <div class="team-grid" style="margin: 0;">
-                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Iqbal&background=13B1B1&color=fff" alt="I"><h4>Iqbal</h4><p>Founder</p></div>
+            
+            <div class="team-grid" style="margin-top: 0;">
+                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Iqbal&background=13B1B1&color=fff" alt="I"><h4>Iqbal</h4><p>Founder & Lead Creative</p></div>
                 <div class="team-card"><img src="https://ui-avatars.com/api/?name=Rian&background=1A2B3C&color=fff" alt="R"><h4>rian</h4><p>Developer</p></div>
                 <div class="team-card"><img src="https://ui-avatars.com/api/?name=Yuda&background=13B1B1&color=fff" alt="Y"><h4>yuda</h4><p>Content Specialist</p></div>
             </div>
