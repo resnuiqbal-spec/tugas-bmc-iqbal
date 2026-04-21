@@ -79,7 +79,9 @@
         }
         .card-bmc:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: var(--primary-tosca); }
         .card-bmc h3 { font-size: 14px; margin-bottom: 12px; font-weight: 800; text-transform: uppercase; }
-        .card-bmc p { font-size: 14px; color: var(--text-dim); text-align: left; } /* Dikembalikan ke rata kiri biar rapi untuk teks pendek */
+        
+        /* Teks BMC dirapikan */
+        .card-bmc p { font-size: 14px; color: var(--text-dim); text-align: justify; line-height: 1.6; }
 
         .cs h3 { color: var(--color-cs); }
         .vp h3 { color: var(--color-vp); }
@@ -170,15 +172,42 @@
 
     <div class="section-padding">
         <div class="bmc-grid">
-            <div class="card-bmc cs"><h3>👥 Customer Segments</h3><p>Mahasiswa, UMKM Digital, & Content Creator.</p></div>
-            <div class="card-bmc vp"><h3>⚡ Value Propositions</h3><p>Template Premium & E-book desain eksklusif.</p></div>
-            <div class="card-bmc ch"><h3>📢 Channels</h3><p>Instagram Reels & Portofolio GitHub.</p></div>
-            <div class="card-bmc cr"><h3>💙 Customer Relationship</h3><p>Dukungan Cepat & Update Aset Berkala.</p></div>
-            <div class="card-bmc generic"><h3>💰 Revenue Streams</h3><p>Penjualan Aset & Jasa Desain Kustom.</p></div>
-            <div class="card-bmc generic"><h3>⚙️ Key Activities</h3><p>Produksi aset kreatif & Riset tren visual.</p></div>
-            <div class="card-bmc generic"><h3>🛠️ Key Resources</h3><p>Keahlian Desain & Library Aset.</p></div>
-            <div class="card-bmc generic"><h3>🤝 Key Partnerships</h3><p>"Jaringan Komunitas Mahasiswa & Himpunan SI, Provider Hosting & Domain, Payment Gateway (Midtrans/Xendit), Vendor Percetakan Merchandise, serta Platform Affiliate & Influencer Lokal.".</p></div>
-            <div class="card-bmc generic"><h3>💲 Cost Structure</h3><p>Software Kreatif & Biaya Operasional.</p></div>
+            <div class="card-bmc cs">
+                <h3>👥 Customer Segments</h3>
+                <p>Target pasar utama kami adalah mahasiswa, *freelancer* pemula, dan pelaku UMKM yang baru merintis digitalisasi. Kami juga menyasar *content creator* yang membutuhkan identitas visual profesional namun memiliki keterbatasan anggaran.</p>
+            </div>
+            <div class="card-bmc vp">
+                <h3>⚡ Value Propositions</h3>
+                <p>Kami menawarkan aset digital premium seperti *template* desain siap pakai dan e-book edukasi yang mudah diedit. Solusi visual ini dirancang khusus untuk meningkatkan nilai jual dan *brand awareness* klien secara instan dan efisien.</p>
+            </div>
+            <div class="card-bmc ch">
+                <h3>📢 Channels</h3>
+                <p>Promosi dan distribusi produk dilakukan secara digital melalui optimalisasi media sosial seperti Instagram Reels dan TikTok. Kami juga memanfaatkan portofolio GitHub untuk *showcase* proyek serta promosi dari mulut ke mulut di komunitas kampus.</p>
+            </div>
+            <div class="card-bmc cr">
+                <h3>💙 Customer Relationship</h3>
+                <p>Kami membangun loyalitas pelanggan melalui layanan dukungan yang responsif dan sesi konsultasi gratis. Selain itu, kami aktif memberikan pembaruan aset berkala agar desain klien selalu relevan dengan tren terkini.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>💰 Revenue Streams</h3>
+                <p>Pendapatan utama perusahaan bersumber dari transaksi penjualan langsung aset digital seperti *template* Canva dan e-book. Kami juga memperoleh pendapatan tambahan melalui layanan jasa desain kustom dan penyuntingan video berbayar.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>⚙️ Key Activities</h3>
+                <p>Kegiatan operasional harian kami berfokus pada produksi aset desain kreatif dan riset tren visual media sosial. Kami juga rutin membuat konten edukasi pemasaran serta memelihara sistem platform transaksi pelanggan.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>🛠️ Key Resources</h3>
+                <p>Aset terpenting kami mencakup keahlian sumber daya manusia dari tim mahasiswa Sistem Informasi. Kami juga didukung oleh perangkat keras memadai, koneksi internet stabil, serta perpustakaan aset digital yang komprehensif.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>🤝 Key Partnerships</h3>
+                <p>Kami berkolaborasi dengan komunitas mahasiswa SI dan influencer lokal untuk memperluas jangkauan promosi. Selain itu, kami bermitra dengan penyedia hosting dan payment gateway guna mendukung kelancaran transaksi digital klien.</p>
+            </div>
+            <div class="card-bmc generic">
+                <h3>💲 Cost Structure</h3>
+                <p>Struktur pengeluaran kami difokuskan pada biaya operasional bulanan seperti langganan lisensi perangkat lunak kreatif premium. Kami juga mengalokasikan dana untuk biaya pemeliharaan domain, hosting, dan anggaran iklan digital skala kecil.</p>
+            </div>
         </div>
     </div>
 
@@ -192,13 +221,13 @@
                 <div class="price-tag">Rp25.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="download.webp" alt="Ebook"></div>
+                <div class="img-container"><img src="OIP (1).webp" alt="Ebook"></div>
                 <h3>E-Book Premium</h3>
                 <p>Panduan desain dan strategi konten viral masa kini.</p>
                 <div class="price-tag">Rp35.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="OIP (1).webp"alt="Desain"></div>
+                <div class="img-container"><img src="download.webp" alt="Desain"></div>
                 <h3>Desain Kustom</h3>
                 <p>Logo & Branding profesional khusus untuk bisnis Anda.</p>
                 <div class="price-tag">Mulai Rp50.000</div>
@@ -217,13 +246,9 @@
             <div>
                 <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 25px; color: var(--dark-navy);">Tentang Kami</h2>
                 
-                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;"><strong>ARP Digital</strong> berawal dari sebuah visi sederhana: menjadikan desain berkualitas tinggi dan profesional dapat diakses oleh siapa saja. Kami menyadari bahwa di era digital saat ini, kesan pertama sangat ditentukan oleh seberapa menarik tampilan visual sebuah brand di internet maupun media sosial.</p>
+                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;"><strong>ARP Digital</strong> adalah platform penyedia layanan dan aset kreatif digital yang dikelola secara penuh oleh Mahasiswa Sistem Informasi. Kami memadukan kemampuan teknologi dan estetika desain untuk membantu UMKM, *freelancer*, dan kreator konten membangun identitas visual yang kuat.</p>
                 
-                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;">Sebagai agensi kreatif yang dikelola penuh oleh mahasiswa Sistem Informasi, kami memadukan kemampuan analitis teknologi dengan sentuhan seni estetika. Kombinasi ini memungkinkan kami merancang strategi visual yang tidak hanya indah dipandang, tetapi juga efektif secara fungsional untuk menarik target audiens yang tepat.</p>
-                
-                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;">Kami hadir menawarkan solusi yang efisien untuk mengatasi mahalnya biaya agensi konvensional. Mulai dari penyediaan template Canva premium yang mudah diedit, e-book panduan praktis, hingga layanan desain kustom dan video editing. Semua produk kami dirancang khusus untuk mempermudah alur kerja Anda tanpa perlu mengorbankan kualitas.</p>
-                
-                <p style="margin-bottom: 35px; color: var(--text-dim); text-align: justify;">Lebih dari sekadar penyedia jasa, ARP Digital berkomitmen untuk menjadi partner kolaborasi Anda. Dengan inovasi tiada henti dan layanan pelanggan yang responsif, kami siap membantu rekan mahasiswa, UMKM, freelancer, dan kreator pemula untuk naik level dan memenangkan persaingan di industri kreatif modern.</p>
+                <p style="margin-bottom: 35px; color: var(--text-dim); text-align: justify;">Kami menawarkan solusi praktis dan terjangkau—mulai dari template Canva premium, e-book panduan media sosial, hingga jasa desain kustom dan video editing. Kami siap menjadi partner kolaborasi Anda untuk tampil lebih profesional di era digital saat ini.</p>
                 
                 <div class="stat-grid">
                     <div class="stat-box"><h4>171</h4><p>Projects</p></div>
