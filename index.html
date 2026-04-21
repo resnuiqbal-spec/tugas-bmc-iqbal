@@ -24,7 +24,7 @@
             --color-cr: #4299E1;
         }
 
-        /* Bikin efek scroll jadi halus/mulus */
+        /* Efek scroll mulus */
         * { scroll-behavior: smooth; box-sizing: border-box; }
 
         body {
@@ -48,18 +48,8 @@
         .logo { font-size: 22px; font-weight: 800; color: var(--dark-navy); letter-spacing: -0.5px; }
         .logo span { color: var(--primary-tosca); }
 
-        /* Kode CSS Menu Navigasi yang baru ditambahkan */
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        .nav-links a { 
-            color: var(--dark-navy); 
-            text-decoration: none; 
-            font-size: 15px; 
-            font-weight: 600; 
-            transition: 0.3s; 
-        }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: var(--dark-navy); text-decoration: none; font-size: 15px; font-weight: 600; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary-tosca); }
 
         .btn-konsultasi {
@@ -71,7 +61,7 @@
         }
         .btn-konsultasi:hover { transform: translateY(-2px); background-color: var(--accent-pink); box-shadow: 0 6px 20px rgba(255, 45, 123, 0.4); }
 
-        /* --- HERO SECTION (Tanpa Gambar, Rata Tengah) --- */
+        /* --- HERO SECTION --- */
         .hero {
             text-align: center; padding: 180px 10% 100px;
             background: linear-gradient(180deg, var(--bg-soft-blue) 0%, #FFFFFF 100%);
@@ -96,7 +86,7 @@
         .ch h3 { color: var(--color-ch); }
         .cr h3 { color: var(--color-cr); }
 
-        /* --- LAYANAN DENGAN GAMBAR WEBP --- */
+        /* --- LAYANAN --- */
         .layanan-section { background-color: var(--bg-soft-blue); padding: 90px 8%; }
         .layanan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
         
@@ -143,8 +133,7 @@
         }
 
         footer { padding: 50px 8%; text-align: center; border-top: 1px solid #EDF2F7; font-size: 13px; color: var(--text-dim); }
-        
-        /* Sembunyikan menu link di HP biar gak numpuk */
+
         @media (max-width: 768px) {
             .nav-links { display: none; }
         }
@@ -154,13 +143,11 @@
 
     <nav>
         <div class="logo">ARP <span>DIGITAL</span></div>
-        
         <div class="nav-links">
             <a href="#beranda">Beranda</a>
             <a href="#layanan">Layanan</a>
             <a href="#tentang">Tentang Kami</a>
         </div>
-
         <button class="btn-konsultasi" onclick="openModal()">Konsultasi</button>
     </nav>
 
@@ -205,13 +192,13 @@
                 <div class="price-tag">Rp25.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="download.webp"alt="Ebook"></div>
+                <div class="img-container"><img src="OIP (1).webp" alt="Ebook"></div>
                 <h3>E-Book Premium</h3>
                 <p>Panduan desain dan strategi konten viral masa kini.</p>
                 <div class="price-tag">Rp35.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="OIP (1).webp" alt="Desain"></div>
+                <div class="img-container"><img src="download.webp" alt="Desain"></div>
                 <h3>Desain Kustom</h3>
                 <p>Logo & Branding profesional khusus untuk bisnis Anda.</p>
                 <div class="price-tag">Mulai Rp50.000</div>
@@ -228,8 +215,10 @@
     <section id="tentang" class="section-padding">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
             <div>
-                <h2>Tentang Kami</h2>
-                <p>ARP Digital membantu Anda tampil menonjol secara digital dengan harga bersahabat.</p>
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 20px; color: var(--dark-navy);">Tentang Kami</h2>
+                <p style="margin-bottom: 15px; color: var(--text-dim);"><strong>ARP Digital</strong> adalah platform penyedia layanan dan aset kreatif digital yang dikelola oleh Mahasiswa Sistem Informasi. Kami hadir dengan misi utama membantu UMKM, freelancer, dan kreator konten dalam membangun identitas visual yang kuat dan profesional di era modern.</p>
+                <p style="margin-bottom: 30px; color: var(--text-dim);">Berbekal kreativitas dan pemahaman teknologi digital, kami menawarkan berbagai solusi praktis—mulai dari template Canva siap pakai, e-book panduan media sosial, hingga jasa desain kustom dan video editing. Kami menjamin kualitas premium dengan harga yang sangat bersahabat bagi semua kalangan.</p>
+                
                 <div class="stat-grid">
                     <div class="stat-box"><h4>171</h4><p>Projects</p></div>
                     <div class="stat-box"><h4>97%</h4><p>Puas</p></div>
