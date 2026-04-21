@@ -9,12 +9,12 @@
     
     <style>
         :root {
-            /* Palette Warna Sesuai Deskripsi */
-            --primary-tosca: #13B1B1;    /* Tosca Kreatif */
-            --dark-navy: #1A2B3C;        /* Navy Formal */
-            --bg-soft-blue: #F0F7FF;     /* Latar Belakang Segar */
+            /* Palette Warna */
+            --primary-tosca: #13B1B1;    
+            --dark-navy: #1A2B3C;        
+            --bg-soft-blue: #F0F7FF;     
             --white: #FFFFFF;
-            --accent-pink: #ff2d7b;      /* Fuchsia Neon */
+            --accent-pink: #ff2d7b;      
             --text-dim: #546E7A;
             
             /* Warna Navigasi Visual BMC */
@@ -24,6 +24,7 @@
             --color-cr: #4299E1;
         }
 
+        /* Bikin efek scroll jadi halus/mulus */
         * { scroll-behavior: smooth; box-sizing: border-box; }
 
         body {
@@ -46,6 +47,20 @@
 
         .logo { font-size: 22px; font-weight: 800; color: var(--dark-navy); letter-spacing: -0.5px; }
         .logo span { color: var(--primary-tosca); }
+
+        /* Kode CSS Menu Navigasi yang baru ditambahkan */
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a { 
+            color: var(--dark-navy); 
+            text-decoration: none; 
+            font-size: 15px; 
+            font-weight: 600; 
+            transition: 0.3s; 
+        }
+        .nav-links a:hover { color: var(--primary-tosca); }
 
         .btn-konsultasi {
             background-color: var(--primary-tosca);
@@ -128,12 +143,24 @@
         }
 
         footer { padding: 50px 8%; text-align: center; border-top: 1px solid #EDF2F7; font-size: 13px; color: var(--text-dim); }
+        
+        /* Sembunyikan menu link di HP biar gak numpuk */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo">ARP <span>DIGITAL</span></div>
+        
+        <div class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#tentang">Tentang Kami</a>
+        </div>
+
         <button class="btn-konsultasi" onclick="openModal()">Konsultasi</button>
     </nav>
 
@@ -178,13 +205,13 @@
                 <div class="price-tag">Rp25.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="OIP (1).webp" alt="Ebook"></div>
+                <div class="img-container"><img src="download.webp"alt="Ebook"></div>
                 <h3>E-Book Premium</h3>
                 <p>Panduan desain dan strategi konten viral masa kini.</p>
                 <div class="price-tag">Rp35.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="download.webp" alt="Desain"></div>
+                <div class="img-container"><img src="OIP (1).webp" alt="Desain"></div>
                 <h3>Desain Kustom</h3>
                 <p>Logo & Branding profesional khusus untuk bisnis Anda.</p>
                 <div class="price-tag">Mulai Rp50.000</div>
