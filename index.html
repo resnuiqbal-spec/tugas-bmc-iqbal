@@ -9,19 +9,19 @@
     
     <style>
         :root {
-            /* Palette Warna */
-            --primary-tosca: #13B1B1;    
-            --dark-navy: #1A2B3C;        
-            --bg-soft-blue: #F0F7FF;     
-            --white: #FFFFFF;
-            --accent-pink: #ff2d7b;      
-            --text-dim: #546E7A;
+            /* Palette Warna Gelap (Dark Mode) */
+            --bg-main: #0F172A;          /* Navy sangat gelap untuk background */
+            --bg-card: #1E293B;          /* Slate navy untuk kotak-kotak */
+            --primary-tosca: #13B1B1;    /* Tosca Neon */
+            --accent-pink: #ff2d7b;      /* Fuchsia Neon */
+            --text-main: #F8FAFC;        /* Teks putih terang */
+            --text-dim: #94A3B8;         /* Teks abu-abu soft */
             
             /* Warna Navigasi Visual BMC */
-            --color-cs: #5A67D8; 
-            --color-vp: #ECC94B; 
-            --color-ch: #F56565; 
-            --color-cr: #4299E1;
+            --color-cs: #818CF8; 
+            --color-vp: #FBBF24; 
+            --color-ch: #FB7185; 
+            --color-cr: #38BDF8;
         }
 
         /* Efek scroll mulus */
@@ -29,8 +29,8 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--white);
-            color: var(--dark-navy);
+            background-color: var(--bg-main);
+            color: var(--text-main);
             margin: 0; padding: 0;
             line-height: 1.7;
         }
@@ -39,18 +39,18 @@
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 15px 8%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(15, 23, 42, 0.95);
             position: fixed; width: 100%; top: 0; z-index: 1000;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid #E2E8F0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .logo { font-size: 22px; font-weight: 800; color: var(--dark-navy); letter-spacing: -0.5px; }
+        .logo { font-size: 22px; font-weight: 800; color: var(--text-main); letter-spacing: -0.5px; }
         .logo span { color: var(--primary-tosca); }
 
         .nav-links { display: flex; gap: 30px; }
-        .nav-links a { color: var(--dark-navy); text-decoration: none; font-size: 15px; font-weight: 600; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary-tosca); }
+        .nav-links a { color: var(--text-main); text-decoration: none; font-size: 15px; font-weight: 600; transition: 0.3s; opacity: 0.8; }
+        .nav-links a:hover { color: var(--primary-tosca); opacity: 1; }
 
         .btn-konsultasi {
             background-color: var(--primary-tosca);
@@ -64,77 +64,77 @@
         /* --- HERO SECTION --- */
         .hero {
             text-align: center; padding: 180px 10% 100px;
-            background: linear-gradient(180deg, var(--bg-soft-blue) 0%, #FFFFFF 100%);
+            background: radial-gradient(circle at top right, #1E293B 0%, #0F172A 70%);
         }
-        .hero h1 { font-size: 48px; font-weight: 800; color: var(--dark-navy); margin-bottom: 20px; line-height: 1.2; }
-        .hero h1 span { color: var(--primary-tosca); }
+        .hero h1 { font-size: 48px; font-weight: 800; color: var(--text-main); margin-bottom: 20px; line-height: 1.2; }
+        .hero h1 span { color: var(--primary-tosca); text-shadow: 0 0 15px rgba(19, 177, 177, 0.4); }
         .hero p { color: var(--text-dim); font-size: 18px; max-width: 650px; margin: 0 auto; }
 
         /* --- BMC GRID --- */
         .section-padding { padding: 90px 8%; }
         .bmc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card-bmc {
-            background: var(--white); padding: 30px; border-radius: 20px;
-            border: 1px solid #EDF2F7; transition: 0.3s;
+            background: var(--bg-card); padding: 30px; border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05); transition: 0.3s;
         }
-        .card-bmc:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: var(--primary-tosca); }
+        .card-bmc:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-color: var(--primary-tosca); }
         .card-bmc h3 { font-size: 14px; margin-bottom: 12px; font-weight: 800; text-transform: uppercase; }
-        
-        /* Teks BMC dirapikan biar gak kepanjangan */
         .card-bmc p { font-size: 14px; color: var(--text-dim); text-align: left; line-height: 1.6; }
 
         .cs h3 { color: var(--color-cs); }
         .vp h3 { color: var(--color-vp); }
         .ch h3 { color: var(--color-ch); }
         .cr h3 { color: var(--color-cr); }
+        .generic h3 { color: var(--text-main); }
 
         /* --- LAYANAN --- */
-        .layanan-section { background-color: var(--bg-soft-blue); padding: 90px 8%; }
+        .layanan-section { background-color: #0B1120; padding: 90px 8%; }
         .layanan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
         
         .card-layanan {
-            background: var(--white); padding: 25px; border-radius: 30px;
-            border: 1px solid #E2E8F0; transition: 0.4s; text-align: left;
+            background: var(--bg-card); padding: 25px; border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05); transition: 0.4s; text-align: left;
         }
         .card-layanan:hover { border-color: var(--primary-tosca); transform: translateY(-10px); }
         
         .img-container {
             width: 100%; height: 180px; border-radius: 20px;
-            overflow: hidden; margin-bottom: 20px; background: #f1f5f9;
+            overflow: hidden; margin-bottom: 20px; background: #0F172A;
         }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .card-layanan:hover img { transform: scale(1.1); }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; opacity: 0.9; }
+        .card-layanan:hover img { transform: scale(1.1); opacity: 1; }
 
         .card-layanan h3 { font-size: 20px; margin-bottom: 10px; color: var(--primary-tosca); font-weight: 800; }
         .card-layanan p { font-size: 13px; color: var(--text-dim); margin-bottom: 20px; }
         .price-tag { 
             display: inline-block; padding: 8px 20px; border-radius: 12px; 
-            background: #E6FFFA; color: var(--primary-tosca); 
+            background: rgba(19, 177, 177, 0.1); color: var(--primary-tosca); 
             font-weight: 800; font-size: 13px; border: 1px solid var(--primary-tosca); 
         }
 
         /* --- STATS & TEAM --- */
         .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 30px; }
-        .stat-box { background: var(--bg-soft-blue); padding: 25px; border-radius: 20px; text-align: center; }
+        .stat-box { background: rgba(255, 255, 255, 0.03); padding: 25px; border-radius: 20px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.02); }
         .stat-box h4 { font-size: 32px; margin: 0; color: var(--primary-tosca); font-weight: 800; }
-        .stat-box p { font-size: 12px; color: var(--dark-navy); margin-top: 5px; font-weight: 700; }
+        .stat-box p { font-size: 12px; color: var(--text-main); margin-top: 5px; font-weight: 700; }
 
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin-top: 50px; }
-        .team-card { background: var(--white); padding: 40px 20px; border-radius: 25px; text-align: center; border: 1px solid #EDF2F7; }
+        .team-card { background: var(--bg-card); padding: 40px 20px; border-radius: 25px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05); }
         .team-card img { width: 90px; height: 90px; border-radius: 50%; margin-bottom: 20px; border: 3px solid var(--primary-tosca); padding: 3px; }
 
         /* --- MODAL --- */
         .modal-overlay {
             display: none; position: fixed; top:0; left:0; width:100%; height:100%;
-            background: rgba(26, 43, 60, 0.4); backdrop-filter: blur(8px); z-index: 2000;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); z-index: 2000;
             justify-content: center; align-items: center;
         }
         .modal-content {
-            background: var(--white); padding: 40px; border-radius: 30px; width: 90%; max-width: 400px;
-            text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative;
+            background: var(--bg-card); padding: 40px; border-radius: 30px; width: 90%; max-width: 400px;
+            text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid rgba(255, 255, 255, 0.05); position: relative;
         }
+        .modal-content p { color: var(--text-dim); }
 
-        footer { padding: 50px 8%; text-align: center; border-top: 1px solid #EDF2F7; font-size: 13px; color: var(--text-dim); }
+        footer { padding: 50px 8%; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 13px; color: var(--text-dim); }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -156,10 +156,10 @@
     <div id="modal" class="modal-overlay">
         <div class="modal-content">
             <i class="fab fa-whatsapp" style="font-size: 50px; color: #25D366; margin-bottom: 20px;"></i>
-            <h3>Mulai Konsultasi</h3>
+            <h3 style="color: var(--text-main);">Mulai Konsultasi</h3>
             <p>Admin: 0895-3305-513636</p>
             <a href="https://wa.me/628953305513636" class="btn-konsultasi" style="display: block; width: 100%; text-decoration:none;" target="_blank">Chat WhatsApp</a>
-            <p onclick="closeModal()" style="margin-top: 20px; cursor: pointer; color: #64748B;">Tutup</p>
+            <p onclick="closeModal()" style="margin-top: 20px; cursor: pointer; color: var(--text-dim);">Tutup</p>
         </div>
     </div>
 
@@ -178,7 +178,7 @@
             </div>
             <div class="card-bmc vp">
                 <h3>⚡ Value Propositions</h3>
-                <p>Solusi <i>template</i> premium dan e-book edukasi yang mudah diedit untuk meningkatkan nilai merek (*brand*) secara instan dan efisien.</p>
+                <p>Solusi <i>template</i> premium dan e-book edukasi yang mudah diedit untuk meningkatkan nilai merek secara instan dan efisien.</p>
             </div>
             <div class="card-bmc ch">
                 <h3>📢 Channels</h3>
@@ -202,7 +202,7 @@
             </div>
             <div class="card-bmc generic">
                 <h3>🤝 Key Partnerships</h3>
-                <p>Komunitas Mahasiswa SI, <i>influencer</i> lokal, serta penyedia layanan mitra digital (*hosting* & *payment gateway*).</p>
+                <p>Komunitas Mahasiswa SI, <i>influencer</i> lokal, serta penyedia layanan mitra digital (<i>hosting</i> & <i>payment gateway</i>).</p>
             </div>
             <div class="card-bmc generic">
                 <h3>💲 Cost Structure</h3>
@@ -212,7 +212,7 @@
     </div>
 
     <section id="layanan" class="layanan-section">
-        <h2 style="text-align:center; margin-bottom: 50px; color: var(--dark-navy);">Layanan Kami</h2>
+        <h2 style="text-align:center; margin-bottom: 50px; color: var(--text-main);">Layanan Kami</h2>
         <div class="layanan-grid">
             <div class="card-layanan">
                 <div class="img-container"><img src="OIP.webp" alt="Canva"></div>
@@ -221,13 +221,13 @@
                 <div class="price-tag">Rp25.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="OIP (1).webp" alt="Ebook"></div>
+                <div class="img-container"><img src="download.webp" alt="Ebook"></div>
                 <h3>E-Book Premium</h3>
                 <p>Panduan desain dan strategi konten viral masa kini.</p>
                 <div class="price-tag">Rp35.000</div>
             </div>
             <div class="card-layanan">
-                <div class="img-container"><img src="download.webp" alt="Desain"></div>
+                <div class="img-container"><img src="OIP (1).webp""OIP (1).webp" alt="Desain"></div>
                 <h3>Desain Kustom</h3>
                 <p>Logo & Branding profesional khusus untuk bisnis Anda.</p>
                 <div class="price-tag">Mulai Rp50.000</div>
@@ -244,9 +244,9 @@
     <section id="tentang" class="section-padding">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: flex-start;">
             <div>
-                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 25px; color: var(--dark-navy);">Tentang Kami</h2>
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 25px; color: var(--text-main);">Tentang Kami</h2>
                 
-                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;"><strong>ARP Digital</strong> adalah platform penyedia layanan dan aset kreatif digital yang dikelola secara penuh oleh Mahasiswa Sistem Informasi. Kami memadukan kemampuan teknologi dan estetika desain untuk membantu UMKM, *freelancer*, dan kreator konten membangun identitas visual yang kuat.</p>
+                <p style="margin-bottom: 15px; color: var(--text-dim); text-align: justify;"><strong>ARP Digital</strong> adalah platform penyedia layanan dan aset kreatif digital yang dikelola secara penuh oleh Mahasiswa Sistem Informasi. Kami memadukan kemampuan teknologi dan estetika desain untuk membantu UMKM, kreator konten, dan <i>freelancer</i> membangun identitas visual yang kuat.</p>
                 
                 <p style="margin-bottom: 35px; color: var(--text-dim); text-align: justify;">Kami menawarkan solusi praktis dan terjangkau—mulai dari template Canva premium, e-book panduan media sosial, hingga jasa desain kustom dan video editing. Kami siap menjadi partner kolaborasi Anda untuk tampil lebih profesional di era digital saat ini.</p>
                 
@@ -259,9 +259,9 @@
             </div>
             
             <div class="team-grid" style="margin-top: 0;">
-                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Iqbal&background=13B1B1&color=fff" alt="I"><h4>Iqbal</h4><p>Founder & Lead Creative</p></div>
-                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Rian&background=1A2B3C&color=fff" alt="R"><h4>rian</h4><p>Developer</p></div>
-                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Yuda&background=13B1B1&color=fff" alt="Y"><h4>yuda</h4><p>Content Specialist</p></div>
+                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Iqbal&background=13B1B1&color=fff" alt="I"><h4>Iqbal</h4><p style="color: var(--text-dim);">Founder</p></div>
+                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Rian&background=1E293B&color=fff" alt="R"><h4>rian</h4><p style="color: var(--text-dim);">Developer</p></div>
+                <div class="team-card"><img src="https://ui-avatars.com/api/?name=Yuda&background=13B1B1&color=fff" alt="Y"><h4>yuda</h4><p style="color: var(--text-dim);">Content Specialist</p></div>
             </div>
         </div>
     </section>
